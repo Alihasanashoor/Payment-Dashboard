@@ -1,1 +1,27 @@
-1-2-2026
+maybe Caching
+
+no JWT token 
+
+backend-for-frontend(FastAPI)
+
+
+
+Router/
+	create_account.py
+	transfer.py
+	users.py
+
+services/
+	payment_client.py??
+	create_account_service.py
+        transfer_service.py
+
+schemas.py
+
+
+utils/
+	security.py
+	config.py - read from .env
+	.env file
+
+main.py

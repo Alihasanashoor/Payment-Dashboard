@@ -1,0 +1,28 @@
+user: open website to ui
+ui: post transfer card to card | show message
+TransferController: TransferValidator | to paymentapiclient TransferService(data) | return response 
+validation:  ok to the controller 
+paymentapiclient: to API POST/cardtocard transfer | return success
+payment api: insert the new transaction | return success to the client  
+db: return success 
+
+______________________________________________________________________
+
+validation fails
+
+user: open website to ui
+ui: post transfer card to card | show message
+TransferController: TransferValidator | return bad request to the ui
+validation: return error to the controller 
+
+_______________________________________________________________________
+
+if account not found 
+
+user: open website to ui
+ui: post transfer card to card | show message
+TransferController: TransferValidator | to paymentapiclient TransferService(data) | return response 
+validation:  ok to the controller 
+paymentapiclient: to API POST/cardtocard transfer | return error 
+payment api: insert the new transaction | return 404 to the client (sender/receiver not found)
+db: falid

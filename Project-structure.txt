@@ -1,0 +1,51 @@
+Payment-Dashboard/
+│
+├── frontend/                 # React Frontend (UI Layer)
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/         # API calls to FastAPI backend
+│   │   │   └── api.js
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   ├── utils/
+│   │   └── App.jsx
+|   ____Dockerfile
+│   ├── package.json
+│   └── vite.config.js (or react config)
+│
+backend/
+│
+├── app/
+│   ├── main.py
+│   │
+│   ├── controllers/
+│   │   ├── account_controller.py
+│   │   └── transfer_controller.py
+│   │
+│   ├── validators/
+│   │   ├── account_validator.py
+│   │   └── transfer_validator.py
+│   │
+│   ├── services/
+│   │   └── payment_api_client.py
+│   │
+│   ├── config/
+│   │   └── settings.py
+│   │
+│   └── schemas/
+│       ├── account_schema.py
+│       └── transfer_schema.py
+│
+├── requirements.txt
+└── Dockerfile
+│
+├── docs/                     # Your C4 diagrams, sequence diagrams
+│   ├── system-context.png
+│   ├── container-diagram.png
+│   └── sequence-diagram.png
+│
+├── docker-compose.yml
+├── README.md
+└── .gitignore
